@@ -1,0 +1,147 @@
+<?php
+if( function_exists('acf_add_local_field_group') ):
+    function toc_registerFields() {
+        acf_add_local_field_group(array(
+            'key' => 'group_615c6e756a9c8',
+            'title' => 'Table of Contents',
+            'fields' => array(
+                array(
+                    'key' => 'field_615c92dee95e1',
+                    'label' => 'Title',
+                    'name' => 'title',
+                    'type' => 'text',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                    'placeholder' => 'In this article',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                ),
+                array(
+                    'key' => 'field_615c6e798eab1',
+                    'label' => 'Headings',
+                    'name' => 'headings',
+                    'type' => 'checkbox',
+                    'instructions' => '',
+                    'required' => 1,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'choices' => array(
+                        'h2' => 'H2',
+                        'h3' => 'H3',
+                        'h4' => 'H4',
+                        'h5' => 'H5',
+                        'h6' => 'H6',
+                    ),
+                    'allow_custom' => 0,
+                    'default_value' => array(
+                        0 => 'h2',
+                    ),
+                    'layout' => 'vertical',
+                    'toggle' => 0,
+                    'return_format' => 'value',
+                    'save_custom' => 0,
+                ),
+                array(
+                    'key' => 'field_615c73ff5069f',
+                    'label' => 'List Style',
+                    'name' => 'list_style',
+                    'type' => 'button_group',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'choices' => array(
+                        'bullet' => 'Bullets',
+                        'number' => 'Numbers',
+                    ),
+                    'allow_null' => 0,
+                    'default_value' => 'number',
+                    'layout' => 'horizontal',
+                    'return_format' => 'value',
+                ),
+                array(
+                    'key' => 'field_615c9044fe455',
+                    'label' => 'Colors',
+                    'name' => '',
+                    'type' => 'accordion',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'open' => 0,
+                    'multi_expand' => 0,
+                    'endpoint' => 0,
+                ),
+                array(
+                    'key' => 'field_615c825962f4a',
+                    'label' => 'Background Color',
+                    'name' => 'background_color',
+                    'type' => 'color_picker',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                ),
+                array(
+                    'key' => 'field_615c878bd4b83',
+                    'label' => 'Text Color',
+                    'name' => 'text_color',
+                    'type' => 'color_picker',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'block',
+                        'operator' => '==',
+                        'value' => 'acf/slick-table-of-contents',
+                    ),
+                ),
+            ),
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+            'active' => true,
+            'description' => '',
+            'modified' => 1633704104,
+        ));
+    }
+
+    add_action('acf/init', 'toc_registerFields');
+endif;
